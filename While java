@@ -1,0 +1,24 @@
+package git;
+import java.util.Scanner;
+public class Git {
+    public static void main(String[] args) {
+
+       Scanner ler = new Scanner(System.in);
+       
+       float peso, count = 0, fim;
+        
+        do{
+            System.out.print("Digite o peso da carga: ");
+            peso = ler.nextInt();
+            count =  count + peso;
+            if (count < 700){
+                fim = 700 - count;
+                System.out.println("Você pode acrescentar mais " +fim+ " Kg");
+            }
+        }   while (count <= 700);
+            
+            if (count >= 700){
+                System.out.println("Acima do peso permido");
+            }
+    }
+}
