@@ -1,0 +1,21 @@
+package git;
+import java.util.Scanner;
+public class Git {
+    public static void main(String[] args) {
+
+       Scanner ler = new Scanner(System.in);
+       
+       int tab,vx;
+
+        System.out.print("Digite Um valor para multiplicação: ");
+                    tab = ler.nextInt();
+        System.out.print("Digite quantas vezes o primeiro valor deve ser multiplicado: ");
+                    vx = ler.nextInt();
+        
+            for (int i = 1; i <= vx; i++){
+                
+                System.out.println(i+ " x " +tab+ " = " + (i * tab));
+            }            
+    }
+    
+}
