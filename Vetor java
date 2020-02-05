@@ -1,0 +1,43 @@
+package vetores;
+import java.util.Scanner;
+/**
+ *
+ * @author DouglasMoura
+ */
+public class Vetores {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       Scanner ler = new Scanner(System.in);
+       int i;
+        
+        System.out.print("Qtd de Notas: ");
+        int qtd = ler.nextInt();
+        double list[] = new double[qtd];
+        
+        for ( i = 0; i < qtd; i++ ){
+            
+            System.out.print("Digite a Nota: ");
+            double n1 = ler.nextDouble();
+            
+            if(n1 != 10.0){
+            
+                list[i] = n1 + 0.5;
+            
+            }
+            else if(n1 == 10.0){
+                
+                list[i] = n1;
+        }
+        }
+        for(i = 0; i < qtd; i++){
+            System.out.println("NP" + (i+1) + " Nota + 0.5: " + list[i]);
+        }
+        System.out.println("VTamanho: "+ list.length);
+            
+             
+                     
+    }
+    
+}
