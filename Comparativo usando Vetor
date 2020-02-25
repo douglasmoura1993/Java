@@ -1,0 +1,71 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package vetores;
+import java.util.Scanner;
+/**
+ *
+ * @author DouglasMoura
+ */
+public class VTeste {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        int i;
+        
+        System.out.print("VT: ");
+        int qtd = ler.nextInt();
+        
+        double a[] = new double[qtd];
+        double b[] = new double[qtd];
+        double igual[] = new double[qtd];
+        double diferenteAeB[] = new double[qtd];
+        double diferenteBeA[] = new double[qtd];
+        for(i = 0; i < qtd; i++){
+            
+            System.out.print("A[]:");
+            double n1 = ler.nextDouble();
+            a[i] = n1;
+        }
+        for(i = 0; i < qtd; i++){
+            
+            System.out.print("B[]:");
+            double n2 = ler.nextDouble();
+            b[i] = n2;
+        }
+        for(i = 0 ; i< qtd; i++){
+            
+            if (a[i] == b[i]){
+                igual[i] = a[i];
+            }
+            
+            if(b[i] != a[i]){
+                diferenteBeA[i] = b[i];
+            }
+            
+            if(b[i] != a[i]){
+                diferenteAeB[i] = a[i];
+            }
+            
+        }
+        for (i = 0; i < qtd ; i++ ){
+                
+            System.out.println("A != B: "+ diferenteAeB[i]);
+                
+        }
+        for (i = 0; i < qtd ; i++ ){
+                
+                System.out.println("B != A: "+ diferenteBeA[i]);
+        }
+        for (i = 0; i < qtd ; i++ ){
+                
+            System.out.println("Iguais: "+ igual[i]);
+        }
+    }
+    
+}
